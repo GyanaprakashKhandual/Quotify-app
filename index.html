@@ -1,17 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quote Generator</title>
+    <title>Quotify - Daily Love Inspiration</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="quote-box">
-        <div class="quote" id="quote">"The best way to predict the future is to invent it."</div>
-        <div class="author" id="author">- Alan Kay</div>
-        <button onclick="generateQuote()">New Quote</button>
+    <div class="floating-hearts" id="floating-hearts"></div>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg class="heart-icon" width="60" height="60" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                        fill="url(#heartGradient)" stroke="white" stroke-width="1" />
+                    <defs>
+                        <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ee5a52;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h1 class="app-title">Quotify</h1>
+            </div>
+            <p class="subtitle">Daily Love & Inspiration</p>
+        </div>
+
+        <div class="quote-container" id="quote-container">
+            <div class="quote-text" id="quote-text">
+                "Love is not about how many days, months, or years you have been together. Love is about how much you
+                love each other every single day."
+            </div>
+            <div class="quote-author" id="quote-author">— Unknown</div>
+        </div>
+
+        <button class="generate-btn" id="generate-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M1 4v6h6M23 20v-6h-6M20.49 9A9 9 0 0 0 5.64 5.64L1 10M22.96 14.36A9 9 0 0 1 8.51 18.36L23 14"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Generate New Quote
+        </button>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="quote-count">1</span>
+                <span class="stat-label">Quotes Read</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100</span>
+                <span class="stat-label">Total Quotes</span>
+            </div>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
